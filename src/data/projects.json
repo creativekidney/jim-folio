@@ -1,0 +1,54 @@
+{
+  "work" : [
+    {
+      "id": 0,
+      "client": "The Guardian",
+      "title": "Maggimite",
+      "backgroundColor": "#2e2d2c",
+      "color": "#FFF",
+      "images": [
+        { "id": 0, "src": "pictures-1.jpg", "alt": "alt here" },
+        { "id": 1, "src": "pictures-10.jpg", "alt": "alt here" },
+        { "id": 2, "src": "pictures-11.jpg", "alt": "alt here" },
+        { "id": 3, "src": "pictures-12.jpg", "alt": "alt here" }
+      ]
+    },
+    {
+      "id": 1,
+      "client": "The Guardian",
+      "title": "Independance",
+      "backgroundColor": "#d7565c",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 2,
+      "client": "Animalography\u2122",
+      "title": "Where animals & type meld",
+      "backgroundColor": "#2e2d2c",
+      "color": "#FFF",
+      "images": [
+        { "id": 0, "src": "pictures-1.jpg", "alt": "alt here" },
+        { "id": 1, "src": "pictures-10.jpg", "alt": "alt here" },
+        { "id": 2, "src": "pictures-11.jpg", "alt": "alt here" },
+        { "id": 3, "src": "pictures-12.jpg", "alt": "alt here" }
+      ]
+    },
+    {
+      "id": 3,
+      "client": "made by blah\u2122",
+      "title": "Lemmy Tribute",
+      "backgroundColor": "#FFF",
+      "color": "#85fa78",
+      "images": []
+    },
+    {
+      "id": 4,
+      "client": "Barclay's",
+      "title": "Code Playground",
+      "backgroundColor": "#6ab089",
+      "color": "#FFF",
+      "images": []
+    }
+  ]
+}

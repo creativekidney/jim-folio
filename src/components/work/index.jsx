@@ -1,41 +1,43 @@
 import React from 'react';
 // import styles from './work.scss';
+import WorkSlide from '../workSlide';
+import data from '../../data/projects.json';
 
 class Work extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      client: props.client,
-      title: props.title,
-    };
-  }
-
-  componentDidMount() {
-  }
+  componentDidMount() {}
 
   componentWillUnmount() {}
 
-  clickHandler() {
-    this.setState({
-      client: 'a different client',
-    });
-  }
-
   render() {
+    const workSlides = data.work.map(piece =>
+      (
+        <WorkSlide
+          key={piece.id}
+          color={piece.color}
+          backgroundColor={piece.backgroundColor}
+          client={piece.client}
+          title={piece.title}
+          images={piece.images}
+        />
+      ),
+    );
+
     return (
       <div>
-        <h1>{this.state.client}</h1>
-        <h2>{this.state.title}</h2>
-        <button onClick={() => this.clickHandler()}>Click me!</button>
+        {workSlides}
+        {/* <WorkSlide
+          color="#00ffff"
+          client="The Guardian"
+          title="Maggiemite"
+        />
+        <WorkSlide
+          color="#ffff00"
+          client="Another client"
+          title="Title of work"
+        /> */}
       </div>
     );
   }
 }
-
-Work.propTypes = {
-  client: React.PropTypes.string.isRequired,
-  title: React.PropTypes.string.isRequired,
-};
 
 export default Work;

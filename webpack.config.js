@@ -19,6 +19,7 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
         use: [{
           loader: 'babel-loader',
           options: {
@@ -38,10 +39,31 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader'],
+        include: [/node_modules/],
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+          'file-loader?name=[path][name].[ext]',
+          // Used for image min/optimisation. Options to be defined
+          'image-webpack-loader',
+        ],
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/i,
+        loaders: ['file-loader?name=assets/fonts/[name].[ext]'],
+      },
     ],
   },
   resolve: {
-    modules: [path.resolve(__dirname, './src'), 'node_modules'],
+    modules: [
+      path.resolve(__dirname, './src'),
+      'node_modules',
+    ],
     extensions: ['.js', '.jsx', '.json'],
   },
+  devtool: 'source-map',
 };
