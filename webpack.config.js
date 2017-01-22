@@ -40,11 +40,6 @@ module.exports = {
         ],
       },
       {
-        test: /\.css$/,
-        loaders: ['style-loader', 'css-loader'],
-        include: [/node_modules/],
-      },
-      {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
           'file-loader?name=[path][name].[ext]',
