@@ -1,9 +1,9 @@
 import React from 'react';
 import Slider from 'react-slick';
+// import styles from './workCarousel.scss';
 // import 'slick-carousel/slick/slick.scss';
 // import 'slick-carousel/slick/slick-theme.css';
 
-// import styles from './workCarousel.scss';
 
 class WorkCarousel extends React.Component {
   constructor(props) {
@@ -26,6 +26,7 @@ class WorkCarousel extends React.Component {
 
     const settings = {
       dots: true,
+      arrows: false,
     };
 
     return (

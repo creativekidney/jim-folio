@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Work from './components/work';
-import styles from './app.scss';
+import './app.scss';
 
 function App() {
   return (

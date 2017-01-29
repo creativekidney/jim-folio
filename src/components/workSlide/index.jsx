@@ -21,8 +21,8 @@ class WorkSlide extends React.Component {
           color: this.props.color,
         }}
       >
-        <h1>{this.props.client}</h1>
-        <h2>{this.props.title}</h2>
+        <h1 className={styles.h1}>{this.props.client}</h1>
+        <h2 className={styles.h2}>{this.props.title}</h2>
         <div className={styles.carousel}>
           <WorkCarousel images={this.props.images} />
         </div>
