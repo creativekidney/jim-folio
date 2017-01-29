@@ -25,16 +25,6 @@ class Work extends React.Component {
     return (
       <div>
         {workSlides}
-        {/* <WorkSlide
-          color="#00ffff"
-          client="The Guardian"
-          title="Maggiemite"
-        />
-        <WorkSlide
-          color="#ffff00"
-          client="Another client"
-          title="Title of work"
-        /> */}
       </div>
     );
   }

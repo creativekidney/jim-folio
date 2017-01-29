@@ -12,7 +12,11 @@ class WorkCarousel extends React.Component {
     this.state = {};
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    if (!this.slider) { return; }
+    console.log(this.slider);
+  }
+
   componentWillUnmount() {}
 
   renderSlider() {
@@ -30,7 +34,7 @@ class WorkCarousel extends React.Component {
     };
 
     return (
-      <Slider {...settings}>
+      <Slider ref={(c) => { this.slider = c; }} {...settings}>
         { images }
       </Slider>
     );

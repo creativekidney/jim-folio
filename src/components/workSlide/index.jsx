@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './workSlide.scss';
 import WorkCarousel from '../workCarousel';
+import Slide from '../slide';
 
 class WorkSlide extends React.Component {
   constructor(props) {
@@ -14,19 +15,16 @@ class WorkSlide extends React.Component {
 
   render() {
     return (
-      <div
-        className={styles.work}
-        style={{
-          backgroundColor: this.props.backgroundColor,
-          color: this.props.color,
-        }}
+      <Slide
+        h1={this.props.client}
+        h2={this.props.title}
+        color={this.props.color}
+        backgroundColor={this.props.backgroundColor}
       >
-        <h1 className={styles.h1}>{this.props.client}</h1>
-        <h2 className={styles.h2}>{this.props.title}</h2>
         <div className={styles.carousel}>
           <WorkCarousel images={this.props.images} />
         </div>
-      </div>
+      </Slide>
     );
   }
 }
