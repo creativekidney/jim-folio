@@ -1,6 +1,6 @@
 import React from 'react';
 // import styles from './work.scss';
-import WorkSlide from '../workSlide';
+import WorkSlide from '../slides/workSlide';
 import data from '../../data/projects.json';
 
 class Work extends React.Component {
@@ -9,15 +9,16 @@ class Work extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const workSlides = data.work.map(piece =>
+    const workSlides = data.work.map((work, index) =>
       (
         <WorkSlide
-          key={piece.id}
-          color={piece.color}
-          backgroundColor={piece.backgroundColor}
-          client={piece.client}
-          title={piece.title}
-          images={piece.images}
+          key={work.id}
+          index={index}
+          color={work.color}
+          backgroundColor={work.backgroundColor}
+          client={work.client}
+          title={work.title}
+          images={work.images}
         />
       ),
     );

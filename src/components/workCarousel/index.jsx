@@ -1,9 +1,5 @@
 import React from 'react';
 import Slider from 'react-slick';
-// import styles from './workCarousel.scss';
-// import 'slick-carousel/slick/slick.scss';
-// import 'slick-carousel/slick/slick-theme.css';
-
 
 class WorkCarousel extends React.Component {
   constructor(props) {
@@ -12,10 +8,7 @@ class WorkCarousel extends React.Component {
     this.state = {};
   }
 
-  componentDidMount() {
-    if (!this.slider) { return; }
-    console.log(this.slider);
-  }
+  componentDidMount() {}
 
   componentWillUnmount() {}
 
@@ -34,7 +27,7 @@ class WorkCarousel extends React.Component {
     };
 
     return (
-      <Slider ref={(c) => { this.slider = c; }} {...settings}>
+      <Slider {...settings}>
         { images }
       </Slider>
     );

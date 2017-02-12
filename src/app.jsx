@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Work from './components/work';
-import AboutSlide from './components/aboutSlide';
-import EndSlide from './components/endSlide';
+import AboutSlide from './components/slides/aboutSlide';
+import EndSlide from './components/slides/endSlide';
 import './app.scss';
 
 function App() {
