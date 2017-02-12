@@ -1,24 +1,15 @@
+/* eslint-disable no-underscore-dangle */
+
 import { createStore } from 'redux';
+import rootReducer from '../reducers';
 
-function counter(state = 0, action) {
-  switch (action.type) {
-    case 'INCREMENT':
-      return state + 1;
-    case 'DECREMENT':
-      return state - 1;
-    default:
-      return state;
-  }
-}
-
-const store = createStore(counter);
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
 
 store.subscribe(() =>
   console.log(store.getState()),
 );
 
-store.dispatch({ type: 'INCREMENT' });
-// 1
-store.dispatch({ type: 'INCREMENT' });
-// 2
-store.dispatch({ type: 'DECREMENT' });
+export default store;

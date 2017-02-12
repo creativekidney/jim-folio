@@ -22,8 +22,8 @@ module.exports = {
         exclude: /node_modules/,
         use: [{
           loader: 'babel-loader',
-          options: {
-            presets: ['es2015'],
+          query: {
+            presets: ['react', 'es2015', 'stage-2'],
             plugins: ['transform-react-jsx'],
           },
         }],
