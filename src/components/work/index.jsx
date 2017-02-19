@@ -1,34 +1,40 @@
 import React from 'react';
-// import styles from './work.scss';
+import { connect } from 'react-redux';
+import { List } from 'immutable';
 import WorkSlide from '../slides/workSlide';
-import data from '../../data/projects.json';
 
-class Work extends React.Component {
-  componentDidMount() {}
+const Work = function Work(props) {
+  const { items } = props;
 
-  componentWillUnmount() {}
+  const workSlides = items.map(work =>
+    (
+      <WorkSlide
+        id={work.get('id')}
+        key={work.get('id')}
+        color={work.get('color')}
+        backgroundColor={work.get('backgroundColor')}
+        client={work.get('client')}
+        title={work.get('title')}
+        images={work.get('images')}
+      />
+    ),
+  );
 
-  render() {
-    const workSlides = data.work.map((work, index) =>
-      (
-        <WorkSlide
-          key={work.id}
-          index={index}
-          color={work.color}
-          backgroundColor={work.backgroundColor}
-          client={work.client}
-          title={work.title}
-          images={work.images}
-        />
-      ),
-    );
+  return (
+    <div>
+      {workSlides}
+    </div>
+  );
+};
 
-    return (
-      <div>
-        {workSlides}
-      </div>
-    );
-  }
-}
+const mapStateToProps = state => ({
+  items: state.work.items,
+});
 
-export default Work;
+export default connect(
+  mapStateToProps,
+)(Work);
+
+Work.propTypes = {
+  items: React.PropTypes.instanceOf(List).isRequired,
+};

@@ -1,4 +1,5 @@
 import React from 'react';
+import { List } from 'immutable';
 import './workSlide.scss';
 import Slide from '../slide';
 import LazyLoadChildren from '../../utils/lazyLoadChildren';
@@ -15,18 +16,18 @@ class WorkSlide extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const { client, title, color, backgroundColor, images, index } = this.props;
+    const { client, title, color, backgroundColor, images } = this.props;
 
     return (
-      <LazyLoadChildren index={index}>
-        <Slide
-          h1={client}
-          h2={title}
-          color={color}
-          backgroundColor={backgroundColor}
-          images={images}
-        />
-      </LazyLoadChildren>
+      // <LazyLoadChildren index={index}>
+      <Slide
+        h1={client}
+        h2={title}
+        color={color}
+        backgroundColor={backgroundColor}
+        images={images}
+      />
+      // </LazyLoadChildren>
     );
   }
 }
@@ -36,8 +37,7 @@ WorkSlide.propTypes = {
   title: React.PropTypes.string.isRequired,
   color: React.PropTypes.string.isRequired,
   backgroundColor: React.PropTypes.string.isRequired,
-  images: React.PropTypes.arrayOf(React.PropTypes.shape).isRequired,
-  index: React.PropTypes.number.isRequired,
+  images: React.PropTypes.instanceOf(List).isRequired,
 };
 
 export default WorkSlide;

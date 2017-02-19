@@ -1,5 +1,6 @@
 import React from 'react';
 import _isEmpty from 'lodash/isEmpty';
+import { List } from 'immutable';
 import styles from './slide.scss';
 import WorkCarousel from '../../workCarousel';
 
@@ -49,11 +50,11 @@ Slide.propTypes = {
   h2: React.PropTypes.string.isRequired,
   color: React.PropTypes.string.isRequired,
   backgroundColor: React.PropTypes.string.isRequired,
-  images: React.PropTypes.arrayOf(React.PropTypes.shape),
+  images: React.PropTypes.instanceOf(List),
 };
 
 Slide.defaultProps = {
-  images: [],
+  images: new List(),
 };
 
 export default Slide;

@@ -1,7 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { Map } from 'immutable';
 import './endSlide.scss';
 import Slide from '../slide';
-import data from '../../../data/projects.json';
 
 class EndSlide extends React.Component {
   constructor(props) {
@@ -14,14 +15,14 @@ class EndSlide extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const { name, jobTitle, color, backgroundColor } = data.about;
+    const { about } = this.props;
 
     return (
       <Slide
-        h1={name}
-        h2={jobTitle}
-        color={color}
-        backgroundColor={backgroundColor}
+        h1={about.get('name', '')}
+        h2={about.get('jobTitle', '')}
+        color={about.get('color', '#fff')}
+        backgroundColor={about.get('backgroundColor', '#fff')}
       >
         <div>
           <p>
@@ -40,6 +41,14 @@ class EndSlide extends React.Component {
   }
 }
 
-EndSlide.propTypes = {};
+const mapStateToProps = state => ({
+  about: state.work.about,
+});
 
-export default EndSlide;
+export default connect(
+  mapStateToProps,
+)(EndSlide);
+
+EndSlide.propTypes = {
+  about: React.PropTypes.instanceOf(Map).isRequired,
+};

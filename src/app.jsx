@@ -7,7 +7,10 @@ import AboutSlide from './components/slides/aboutSlide';
 import EndSlide from './components/slides/endSlide';
 import store from './store/store';
 import data from './data/projects.json';
-import { addWorkItems } from './actions/work';
+import {
+  addWorkItems,
+  addAboutInfo,
+ } from './actions/work';
 import './app.scss';
 
 function App() {
@@ -27,4 +30,5 @@ ReactDOM.render(
   document.getElementById('root'),
 );
 
+store.dispatch(addAboutInfo(fromJS(data.about)));
 store.dispatch(addWorkItems(fromJS(data.work)));
