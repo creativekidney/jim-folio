@@ -2,26 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { fromJS } from 'immutable';
-import Work from './components/work';
-import AboutSlide from './components/slides/aboutSlide';
-import EndSlide from './components/slides/endSlide';
+import Work from './components/containers/work';
+import AboutSlide from './components/containers/aboutSlide';
+import EndSlide from './components/containers/endSlide';
+import Scroller from './components/containers/scroller';
 import store from './store/store';
 import data from './data/projects.json';
-import ScrollContainer from './components/utils/scrollContainer';
-import {
-  addWorkItems,
-  addAboutInfo,
- } from './actions/work';
+import { addWorkItems, addAboutInfo } from './actions/work';
 import './app.scss';
 
 function App() {
   return (
     <Provider store={store}>
-      <ScrollContainer>
+      <Scroller>
         <AboutSlide />
         <Work />
         <EndSlide />
-      </ScrollContainer>
+      </Scroller>
     </Provider>
   );
 }

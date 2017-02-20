@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Map, List } from 'immutable';
-import './endSlide.scss';
-import Slide from '../slide';
+import { Map } from 'immutable';
+import './aboutSlide.scss';
+import Slide from '../../presentational/slide';
 
-class EndSlide extends React.Component {
+class AboutSlide extends React.Component {
   constructor(props) {
     super(props);
 
@@ -15,11 +15,11 @@ class EndSlide extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const { about, items } = this.props;
+    const { about } = this.props;
 
     return (
       <Slide
-        pos={items.size}
+        pos={0}
         h1={about.get('name', '')}
         h2={about.get('jobTitle', '')}
         color={about.get('color', '#fff')}
@@ -27,13 +27,17 @@ class EndSlide extends React.Component {
       >
         <div>
           <p>
-            Well done,<br />
-            you made it.
+            Hi, my name is Jim Townsend.<br />
+            Congratulations on finding my<br />
+            online portfolio.
           </p>
           <p>
-            Please feel<br />
-            free to get in touch<br />
-            made by blah™<br />
+            I’m a designer/art director currently<br />
+            working at BBH London and also one<br />
+            half of creative duo made by blah™
+          </p>
+          <p>
+            Please feel free to get in touch<br />
             +44 7855 427 917
           </p>
         </div>
@@ -44,14 +48,12 @@ class EndSlide extends React.Component {
 
 const mapStateToProps = state => ({
   about: state.work.about,
-  items: state.work.items,
 });
 
 export default connect(
   mapStateToProps,
-)(EndSlide);
+)(AboutSlide);
 
-EndSlide.propTypes = {
+AboutSlide.propTypes = {
   about: React.PropTypes.instanceOf(Map).isRequired,
-  items: React.PropTypes.instanceOf(List).isRequired,
 };

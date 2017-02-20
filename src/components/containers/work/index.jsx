@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { List } from 'immutable';
-import WorkSlide from '../slides/workSlide';
+import WorkSlide from '../../presentational/workSlide';
 
 const Work = function Work(props) {
   const { items } = props;
