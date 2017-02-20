@@ -6,10 +6,10 @@ import WorkSlide from '../slides/workSlide';
 const Work = function Work(props) {
   const { items } = props;
 
-  const workSlides = items.map(work =>
+  const workSlides = items.map((work, key) =>
     (
       <WorkSlide
-        id={work.get('id')}
+        pos={key + 1}
         key={work.get('id')}
         color={work.get('color')}
         backgroundColor={work.get('backgroundColor')}

@@ -19,6 +19,7 @@ class AboutSlide extends React.Component {
 
     return (
       <Slide
+        pos={0}
         h1={about.get('name', '')}
         h2={about.get('jobTitle', '')}
         color={about.get('color', '#fff')}

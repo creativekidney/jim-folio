@@ -2,7 +2,7 @@ import React from 'react';
 import { List } from 'immutable';
 import './workSlide.scss';
 import Slide from '../slide';
-import LazyLoadChildren from '../../utils/lazyLoadChildren';
+// import LazyLoadChildren from '../../utils/lazyLoadChildren';
 
 class WorkSlide extends React.Component {
   constructor(props) {
@@ -16,11 +16,12 @@ class WorkSlide extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const { client, title, color, backgroundColor, images } = this.props;
+    const { pos, client, title, color, backgroundColor, images } = this.props;
 
     return (
       // <LazyLoadChildren index={index}>
       <Slide
+        pos={pos}
         h1={client}
         h2={title}
         color={color}
@@ -33,6 +34,7 @@ class WorkSlide extends React.Component {
 }
 
 WorkSlide.propTypes = {
+  pos: React.PropTypes.number.isRequired,
   client: React.PropTypes.string.isRequired,
   title: React.PropTypes.string.isRequired,
   color: React.PropTypes.string.isRequired,

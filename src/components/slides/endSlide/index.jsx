@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Map } from 'immutable';
+import { Map, List } from 'immutable';
 import './endSlide.scss';
 import Slide from '../slide';
 
@@ -15,10 +15,11 @@ class EndSlide extends React.Component {
   componentWillUnmount() {}
 
   render() {
-    const { about } = this.props;
+    const { about, items } = this.props;
 
     return (
       <Slide
+        pos={items.size}
         h1={about.get('name', '')}
         h2={about.get('jobTitle', '')}
         color={about.get('color', '#fff')}
@@ -43,6 +44,7 @@ class EndSlide extends React.Component {
 
 const mapStateToProps = state => ({
   about: state.work.about,
+  items: state.work.items,
 });
 
 export default connect(
@@ -51,4 +53,5 @@ export default connect(
 
 EndSlide.propTypes = {
   about: React.PropTypes.instanceOf(Map).isRequired,
+  items: React.PropTypes.instanceOf(List).isRequired,
 };

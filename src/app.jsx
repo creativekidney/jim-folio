@@ -7,6 +7,7 @@ import AboutSlide from './components/slides/aboutSlide';
 import EndSlide from './components/slides/endSlide';
 import store from './store/store';
 import data from './data/projects.json';
+import ScrollContainer from './components/utils/scrollContainer';
 import {
   addWorkItems,
   addAboutInfo,
@@ -16,11 +17,11 @@ import './app.scss';
 function App() {
   return (
     <Provider store={store}>
-      <div>
+      <ScrollContainer>
         <AboutSlide />
         <Work />
         <EndSlide />
-      </div>
+      </ScrollContainer>
     </Provider>
   );
 }
