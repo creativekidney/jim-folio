@@ -1,0 +1,228 @@
+{
+  "about": {
+    "name": "Jim Townsend",
+    "jobTitle": "Design/Art Direction",
+    "color": "#fff",
+    "backgroundColor": "#00FF80"
+  },
+  "work" : [
+    {
+      "id": 0,
+      "client": "The Guardian",
+      "title": "Maggimite",
+      "backgroundColor": "#2e2d2c",
+      "color": "#FFF",
+      "images": [
+        { "id": 0, "src": "pictures-1.jpg", "alt": "alt here" },
+        { "id": 1, "src": "pictures-10.jpg", "alt": "alt here" },
+        { "id": 2, "src": "pictures-11.jpg", "alt": "alt here" },
+        { "id": 3, "src": "pictures-12.jpg", "alt": "alt here" }
+      ]
+    },
+    {
+      "id": 1,
+      "client": "The Guardian",
+      "title": "Independance",
+      "backgroundColor": "#d7565c",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 2,
+      "client": "Animalography",
+      "title": "Animals & type meld",
+      "backgroundColor": "#2e2d2c",
+      "color": "#FFF",
+      "images": [
+        { "id": 0, "src": "pictures-1.jpg", "alt": "alt here" },
+        { "id": 1, "src": "pictures-10.jpg", "alt": "alt here" },
+        { "id": 2, "src": "pictures-11.jpg", "alt": "alt here" },
+        { "id": 3, "src": "pictures-12.jpg", "alt": "alt here" }
+      ]
+    },
+    {
+      "id": 3,
+      "client": "made by blah\u2122",
+      "title": "Lemmy Tribute",
+      "backgroundColor": "#E5E5E5",
+      "color": "#fff",
+      "images": []
+    },
+    {
+      "id": 4,
+      "client": "made by blah\u2122",
+      "title": "SOHO not SOSO!",
+      "backgroundColor": "#2E2D2C",
+      "color": "#fff",
+      "images": []
+    },
+    {
+      "id": 5,
+      "client": "Barclay's",
+      "title": "Code Playground",
+      "backgroundColor": "#6ab089",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 6,
+      "client": "The Guardian",
+      "title": "Numbers",
+      "backgroundColor": "#E04258",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 7,
+      "client": "J20",
+      "title": "Tropical Affair",
+      "backgroundColor": "#424363",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 8,
+      "client": "The Guardian",
+      "title": "Own the Weekend",
+      "backgroundColor": "#FFC4BD",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 9,
+      "client": "Weetabix",
+      "title": "Incredible Inside",
+      "backgroundColor": "#E9844F",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 10,
+      "client": "The Observer",
+      "title": "Food Monthly Awards",
+      "backgroundColor": "#3D3B52",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 11,
+      "client": "Barnardo's",
+      "title": "camPAIN",
+      "backgroundColor": "#DF4A58",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 12,
+      "client": "made by blah\u2122",
+      "title": "Baby on Board",
+      "backgroundColor": "#243449",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 13,
+      "client": "made by blah\u2122",
+      "title": "Southern FAIL logo",
+      "backgroundColor": "#36A561",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 14,
+      "client": "The Guardian",
+      "title": "Photography Masterclass",
+      "backgroundColor": "#E681B2",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 15,
+      "client": "Axe",
+      "title": "But",
+      "backgroundColor": "#2E2D2C",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 16,
+      "client": "The Guardian",
+      "title": "Do Something",
+      "backgroundColor": "#F3D915",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 17,
+      "client": "The Guardian",
+      "title": "World Cup 14'",
+      "backgroundColor": "#2E2D2C",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 18,
+      "client": "Wrigleys",
+      "title": "Night Jar",
+      "backgroundColor": "#01AFE9",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 19,
+      "client": "Samsung",
+      "title": "Bedtime VR Stories",
+      "backgroundColor": "#424363",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 20,
+      "client": "The Guardian",
+      "title": "Music",
+      "backgroundColor": "#EB9397",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 21,
+      "client": "Outsmart",
+      "title": "Re referendum",
+      "backgroundColor": "#3C3C3B",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 22,
+      "client": "Very Tall",
+      "title": "Logo & Branding",
+      "backgroundColor": "#DF4A58",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 23,
+      "client": "made by blah\u2122",
+      "title": "RIP Lou Reed",
+      "backgroundColor": "#ECC700",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 24,
+      "client": "made by blah\u2122",
+      "title": "Night Tube",
+      "backgroundColor": "#2E2D2C",
+      "color": "#FFF",
+      "images": []
+    },
+    {
+      "id": 25,
+      "client": "made by blah\u2122",
+      "title": "google-eyes tote bag",
+      "backgroundColor": "#FF7C80",
+      "color": "#FFF",
+      "images": []
+    }
+  ]
+}

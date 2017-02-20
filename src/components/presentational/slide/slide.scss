@@ -1,0 +1,26 @@
+@import '../../../styles/_variables.scss';
+
+.h1, .h2 {
+  font: 2.4rem/0.7rem "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 400;
+  display: block;
+  letter-spacing: 0.1rem;
+}
+
+.h2 {
+  margin-bottom: 5rem;
+}
+
+p {
+  font: 3.8rem/4.2rem $default-font;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  padding: 4rem;
+  box-sizing: border-box;
+  position: relative;
+}
