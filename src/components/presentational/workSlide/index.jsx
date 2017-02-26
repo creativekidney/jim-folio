@@ -1,22 +1,26 @@
 import React from 'react';
 import { List } from 'immutable';
-import './workSlide.scss';
+import _isEmpty from 'lodash/isEmpty';
+import styles from './workSlide.scss';
 import Slide from '../slide';
+import WorkCarousel from '../../workCarousel';
 // import LazyLoadChildren from '../../utils/lazyLoadChildren';
 
 class WorkSlide extends React.Component {
-  constructor(props) {
-    super(props);
+  renderCarousel() {
+    const { images } = this.props;
 
-    this.state = {};
+    if (_isEmpty(images)) { return null; }
+
+    return (
+      <div className={styles.carousel}>
+        <WorkCarousel images={images} />
+      </div>
+    );
   }
 
-  componentDidMount() {}
-
-  componentWillUnmount() {}
-
   render() {
-    const { pos, client, title, color, backgroundColor, images } = this.props;
+    const { pos, client, title, color, backgroundColor } = this.props;
 
     return (
       // <LazyLoadChildren index={index}>
@@ -26,8 +30,9 @@ class WorkSlide extends React.Component {
         h2={title}
         color={color}
         backgroundColor={backgroundColor}
-        images={images}
-      />
+      >
+        {this.renderCarousel()}
+      </Slide>
       // </LazyLoadChildren>
     );
   }

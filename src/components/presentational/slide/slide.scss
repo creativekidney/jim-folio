@@ -5,16 +5,22 @@
   font-weight: 400;
   display: block;
   letter-spacing: 0.1rem;
+  position: relative;
+  z-index: 10;
 }
 
 .h2 {
   margin-bottom: 5rem;
+  position: relative;
+  z-index: 10;
 }
 
 p {
   font: 3.8rem/4.2rem $default-font;
   font-weight: 400;
   letter-spacing: 0.2rem;
+  position: relative;
+  z-index: 10;
 }
 
 .slide {

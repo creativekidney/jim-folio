@@ -1,33 +1,60 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { List } from 'immutable';
-import Scroll, { Link, animateScroll } from 'react-scroll';
-import styles from './scroller.scss';
 import _debounce from 'lodash/debounce';
+import { Link, animateScroll } from 'react-scroll';
+import styles from './scroller.scss';
 
 class Scroller extends React.Component {
-  componentDidMount() {
-    window.addEventListener('scroll', _debounce(this.scrollHandler, 200));
-  }
-
-  componentWillUnmount() {}
-
-  scrollHandler(e) {
+  static getCurSlide() {
     const doc = document.documentElement;
-    const scrollTop = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-    const curSlide = Math.round(scrollTop / window.innerHeight)
-    
-    animateScroll.scrollTo(curSlide * window.innerHeight, {duration: 300})
+    const scrollTop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+
+    return Math.round(scrollTop / window.innerHeight);
   }
 
-  render () {
-    const { children, items } = this.props;
+  static gotoSlide(slide) {
+    animateScroll.scrollTo(slide * window.innerHeight, { duration: 300 });
+  }
 
+  static keydownHandler(e) {
+    if (e.keyCode !== 38 && e.keyCode !== 40) { return; }
+    e.preventDefault();
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', _debounce(() => this.scrollHandler(), 200), false);
+    window.addEventListener('keyup', _debounce(e => this.keyupHandler(e), 100), false);
+    window.addEventListener('keydown', this.constructor.keydownHandler, false);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', _debounce(() => this.scrollHandler(), 200), false);
+    window.removeEventListener('keyup', _debounce(e => this.keyupHandler(e), 100), false);
+    window.removeEventListener('keydown', this.constructor.keydownHandler, false);
+  }
+
+  scrollHandler() {
+    this.constructor.gotoSlide(this.constructor.getCurSlide());
+  }
+
+  keyupHandler(e) {
+    const { items } = this.props;
+    if (e.keyCode !== 38 && e.keyCode !== 40) { return; }
+    e.preventDefault();
+
+    const modifier = e.keyCode === 38 ? -1 : 1;
+    const nextSlide = (this.constructor.getCurSlide() + modifier) % (items.size + 2);
+    this.constructor.gotoSlide(nextSlide);
+  }
+
+  render() {
+    const { children, items } = this.props;
     const opts = {
       duration: 1000,
       smooth: true,
-      spy: true
-    }
+      spy: true,
+    };
 
     return (
       <div>
@@ -39,7 +66,7 @@ class Scroller extends React.Component {
             activeClass={styles.pageDotActive}
             to="slide0"
             spy={opts.spy}
-            smooth={opts.smooth} 
+            smooth={opts.smooth}
             duration={opts.duration}
           />
           {items.map((item, key) => {
@@ -49,9 +76,9 @@ class Scroller extends React.Component {
                 key={id}
                 className={styles.pageDot}
                 activeClass={styles.pageDotActive}
-                to={"slide" + (key + 1)}
+                to={`slide${(key + 1)}`}
                 spy={opts.spy}
-                smooth={opts.smooth} 
+                smooth={opts.smooth}
                 duration={opts.duration}
               />
             );
@@ -60,16 +87,16 @@ class Scroller extends React.Component {
             key={items.size + 2}
             className={styles.pageDot}
             activeClass={styles.pageDotActive}
-            to={"slide" + (items.size + 1)}
+            to={`slide${(items.size + 1)}`}
             spy={opts.spy}
-            smooth={opts.smooth} 
+            smooth={opts.smooth}
             duration={opts.duration}
           />
         </div>
       </div>
-    )
+    );
   }
-};
+}
 
 Scroller.propTypes = {
   children: React.PropTypes.node.isRequired,
