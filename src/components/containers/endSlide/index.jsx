@@ -19,7 +19,7 @@ class EndSlide extends React.Component {
 
     return (
       <Slide
-        pos={items.size}
+        pos={items.size + 1}
         h1={about.get('name', '')}
         h2={about.get('jobTitle', '')}
         color={about.get('color', '#fff')}

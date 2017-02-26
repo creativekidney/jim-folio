@@ -1,46 +1,74 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { List } from 'immutable';
-import Scroll from 'react-scroll';
+import Scroll, { Link, animateScroll } from 'react-scroll';
 import styles from './scroller.scss';
+import _debounce from 'lodash/debounce';
 
-const Scroller = function Scroller(props) {
-  const { children, items } = props;
+class Scroller extends React.Component {
+  componentDidMount() {
+    window.addEventListener('scroll', _debounce(this.scrollHandler, 200));
+  }
 
-  const scroll = Scroll.animateScroll;
+  componentWillUnmount() {}
 
-  const clickHandler = (key) => {
-    scroll.scrollTo(key * window.innerHeight);
-  };
+  scrollHandler(e) {
+    const doc = document.documentElement;
+    const scrollTop = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+    const curSlide = Math.round(scrollTop / window.innerHeight)
+    
+    animateScroll.scrollTo(curSlide * window.innerHeight, {duration: 300})
+  }
 
-  return (
-    <div>
-      {children}
-      <div className={styles.nav}>
-        <button
-          key={0}
-          className={styles.pageDot}
-          onClick={() => clickHandler(0)}
-        />
-        {items.map((item, key) => {
-          const id = item.get('id') + 1;
+  render () {
+    const { children, items } = this.props;
 
-          return (
-            <button
-              key={id}
-              className={styles.pageDot}
-              onClick={() => clickHandler(key + 1)}
-            />
-          );
-        })}
-        <button
-          key={items.size + 2}
-          className={styles.pageDot}
-          onClick={() => clickHandler(items.size + 1)}
-        />
+    const opts = {
+      duration: 1000,
+      smooth: true,
+      spy: true
+    }
+
+    return (
+      <div>
+        {children}
+        <div className={styles.nav}>
+          <Link
+            key={0}
+            className={styles.pageDot}
+            activeClass={styles.pageDotActive}
+            to="slide0"
+            spy={opts.spy}
+            smooth={opts.smooth} 
+            duration={opts.duration}
+          />
+          {items.map((item, key) => {
+            const id = item.get('id') + 1;
+            return (
+              <Link
+                key={id}
+                className={styles.pageDot}
+                activeClass={styles.pageDotActive}
+                to={"slide" + (key + 1)}
+                spy={opts.spy}
+                smooth={opts.smooth} 
+                duration={opts.duration}
+              />
+            );
+          })}
+          <Link
+            key={items.size + 2}
+            className={styles.pageDot}
+            activeClass={styles.pageDotActive}
+            to={"slide" + (items.size + 1)}
+            spy={opts.spy}
+            smooth={opts.smooth} 
+            duration={opts.duration}
+          />
+        </div>
       </div>
-    </div>
-  );
+    )
+  }
 };
 
 Scroller.propTypes = {

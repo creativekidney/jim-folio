@@ -1,19 +1,11 @@
 import React from 'react';
 import _isEmpty from 'lodash/isEmpty';
 import { List } from 'immutable';
+import { Element } from 'react-scroll';
 import styles from './slide.scss';
 import WorkCarousel from '../../workCarousel';
 
 class Slide extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-  }
-
-  componentDidMount() {}
-  componentWillUnmount() {}
-
   renderCarousel() {
     const { images } = this.props;
 
@@ -27,10 +19,11 @@ class Slide extends React.Component {
   }
 
   render() {
-    const { backgroundColor, color, h1, h2 } = this.props;
+    const { backgroundColor, color, h1, h2, pos } = this.props;
 
     return (
-      <div
+      <Element
+        name={`slide${pos}`}
         className={styles.slide}
         style={{
           backgroundColor,
@@ -40,7 +33,7 @@ class Slide extends React.Component {
         <h1 className={styles.h1}>{h1}</h1>
         <h2 className={styles.h2}>{h2}</h2>
         {this.renderCarousel()}
-      </div>
+      </Element>
     );
   }
 }
@@ -51,6 +44,7 @@ Slide.propTypes = {
   color: React.PropTypes.string.isRequired,
   backgroundColor: React.PropTypes.string.isRequired,
   images: React.PropTypes.instanceOf(List),
+  pos: React.PropTypes.number.isRequired,
 };
 
 Slide.defaultProps = {
