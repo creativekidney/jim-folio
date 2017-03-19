@@ -8,13 +8,13 @@ import WorkCarousel from '../../workCarousel';
 
 class WorkSlide extends React.Component {
   renderCarousel() {
-    const { images } = this.props;
+    const { images, copy } = this.props;
 
     if (_isEmpty(images)) { return null; }
 
     return (
       <div className={styles.carousel}>
-        <WorkCarousel images={images} />
+        <WorkCarousel images={images} copy={copy} />
       </div>
     );
   }
@@ -45,6 +45,7 @@ WorkSlide.propTypes = {
   color: React.PropTypes.string.isRequired,
   backgroundColor: React.PropTypes.string.isRequired,
   images: React.PropTypes.instanceOf(List).isRequired,
+  copy: React.PropTypes.string.isRequired,
 };
 
 export default WorkSlide;

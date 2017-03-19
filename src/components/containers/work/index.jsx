@@ -6,6 +6,8 @@ import WorkSlide from '../../presentational/workSlide';
 const Work = function Work(props) {
   const { items } = props;
 
+  console.log(items.toJS());
+
   const workSlides = items.map((work, key) =>
     (
       <WorkSlide
@@ -16,6 +18,7 @@ const Work = function Work(props) {
         client={work.get('client')}
         title={work.get('title')}
         images={work.get('images')}
+        copy={work.get('copy')}
       />
     ),
   );

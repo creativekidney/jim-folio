@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import { List } from 'immutable';
+import styles from './workCarousel.scss';
 
 class WorkCarousel extends React.Component {
   constructor(props) {
@@ -9,17 +10,26 @@ class WorkCarousel extends React.Component {
     this.state = {};
   }
 
-  componentDidMount() {}
-
-  componentWillUnmount() {}
+  getCopyMarkup() {
+    const { copy } = this.props;
+    return { __html: copy };
+  }
 
   renderSlider() {
-    const images = this.props.images.map(image =>
+    let slides = this.props.images.map(image =>
       (
-        <div key={image.get('id')}>
+        <div className={styles.slide} key={image.get('id')}>
           <img src={`/assets/images/${image.get('src')}`} alt={image.get('alt')} />
         </div>
       ),
+    );
+
+    slides = slides.push(
+      <div className={styles.slide} key="-1">
+        <div className={styles.synopsis}>
+          <p dangerouslySetInnerHTML={this.getCopyMarkup()} />
+        </div>
+      </div>,
     );
 
     const settings = {
@@ -29,7 +39,7 @@ class WorkCarousel extends React.Component {
 
     return (
       <Slider {...settings}>
-        { images }
+        { slides }
       </Slider>
     );
   }
@@ -45,6 +55,7 @@ class WorkCarousel extends React.Component {
 
 WorkCarousel.propTypes = {
   images: React.PropTypes.instanceOf(List).isRequired,
+  copy: React.PropTypes.string.isRequired,
 };
 
 export default WorkCarousel;
