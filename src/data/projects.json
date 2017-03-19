@@ -14,7 +14,8 @@
       "color": "#FFF",
       "images": [
         { "id": 0, "src": "guardian-maggiemite/maggiemite.jpg", "alt": "The Guardian Maggiemite" }
-      ]
+      ],
+      "copy": ""
     },
     {
       "id": 1,
@@ -31,7 +32,8 @@
         { "id": 5, "src": "guardian-independance/guardian-independance-06.jpg", "alt": "The Guardian Independance 6" },
         { "id": 6, "src": "guardian-independance/guardian-independance-07.jpg", "alt": "The Guardian Independance 7" },
         { "id": 7, "src": "guardian-independance/guardian-independance-08.jpg", "alt": "The Guardian Independance 8" }
-      ]
+      ],
+      "copy": "-<br/>Tactical Ad to promote a supplement on the life of Margaret Thatcher, the weekend after her death. Loved and loathed in equal measure.<br/>-<br/>Design/Art Direction illustration<br/>-"
     },
     {
       "id": 2,
@@ -46,7 +48,8 @@
         { "id": 3, "src": "animalography/animalography-04.jpg", "alt": "Animalography 4" },
         { "id": 4, "src": "animalography/animalography-05.jpg", "alt": "Animalography 5" },
         { "id": 5, "src": "animalography/animalography-06.jpg", "alt": "Animalography 6" }
-      ]
+      ],
+      "copy": "-<br/>Set of posters available at:<br/><br/><a href=\"http://shop.theymadethislondon.com/collections/animalography\">http://shop.theymadethislondon.com/collections/animalography</a>"
     },
     {
       "id": 3,
@@ -56,7 +59,8 @@
       "color": "#fff",
       "images": [
         { "id": 0, "src": "lemmy-tribute/lemmy-01.jpg", "alt": "Lemmy Tribute" }
-      ]
+      ],
+      "copy": "-<br/>Tribute Poster/ T-Shirt and Print to commemorate the death of Motorhead frontman Lemmy Kilmister, who famously drank a bottle of Jack Daniel's every day.<br/>-<br/>Creative Design/ArtDirectionTypography<br/>-"
     },
     {
       "id": 4,
@@ -67,7 +71,8 @@
       "images": [
         { "id": 0, "src": "soho-not-soho/soho-not-soso-01.jpg", "alt": "Soho not Soso 1" },
         { "id": 1, "src": "soho-not-soho/soho-not-soso-02.jpg", "alt": "Soho not Soso 2" }
-      ]
+      ],
+      "copy": "-<br/>SOHO not SOSO! is a celebration of the creativity, character and naughtiness inherent in Soho. 20 leading artists and illustrators including Sir Peter Blake collaborated to create unique works of graphic art that reflect the diverse DNA that makes Soho the area it is. Our work was exhibited at The Getty Gallery and on Berwick Street for their festival of Soho.<br/>-<br/>@sohonotsoho!"
     },
     {
       "id": 5,
@@ -77,12 +82,13 @@
       "color": "#FFF",
       "images": [
         { "id": 0, "src": "barclays-code-playground/barclays-code-playground-01.jpg", "alt": "Barclays Code Playground" }
-      ]
+      ],
+      "copy": "-<br/>In 2014 coding was included in the UK curriculum. This change led to a need to raise the public awareness of the importance of coding<br/>-<br/>given the vital role it will play in the future employability children and in the economy of the future.<br/>-<br/>Design/ArtDirection Typography<br/>-<br/><a href=\"barclayscodeplayground.co.uk\">barclayscodeplayground.co.uk</a>"
     },
     {
       "id": 6,
       "client": "The Guardian",
-      "title": "Numbers",
+      "title": "The Whole Picture",
       "backgroundColor": "#E04258",
       "color": "#FFF",
       "images": [
@@ -92,7 +98,8 @@
         { "id": 3, "src": "guardian-numbers/guardian-numbers-04.jpg", "alt": "Guardian Numbers 4" },
         { "id": 4, "src": "guardian-numbers/guardian-numbers-05.jpg", "alt": "Guardian Numbers 5" },
         { "id": 5, "src": "guardian-numbers/guardian-numbers-06.jpg", "alt": "Guardian Numbers 6" }
-      ]
+      ],
+      "copy": "-<br/>The Guardian wanted us to explain its new approach to journalism. Open journalism is where a story can start anywhere. A journalist doesn’t have to have the first word, or the last. Instead, a story gets constantly updated with different viewpoints, to provide the whole picture.<br/>-<br/>Design/ArtDirection Illustration<br/>-"
     },
     {
       "id": 7,
@@ -105,7 +112,8 @@
         { "id": 1, "src": "j20/j20-02.jpg", "alt": "j20 2" },
         { "id": 2, "src": "j20/j20-03.jpg", "alt": "j20 3" },
         { "id": 3, "src": "j20/j20-04.jpg", "alt": "j20 4" }
-      ]
+      ],
+      "copy": "-<br/>Packaging for J2O’s 2016 summer blends.<br/>-<br/>Design Typography<br/>-<br/>@flamingofling"
     },
     {
       "id": 8,
@@ -117,7 +125,8 @@
         { "id": 0, "src": "guardian-own-the-weekend/guardian-own-the-weekend-01.jpg", "alt": "Guardian Own The Weekend 1" },
         { "id": 1, "src": "guardian-own-the-weekend/guardian-own-the-weekend-02.jpg", "alt": "Guardian Own The Weekend 2" },
         { "id": 2, "src": "guardian-own-the-weekend/guardian-own-the-weekend-03.jpg", "alt": "Guardian Own The Weekend 3" }
-      ]
+      ],
+      "copy": "-<br/>Digital posters to promote the guardian weekend supplement.<br/>-<br/>Design/Typography illustration<br/>-"
     },
     {
       "id": 9,
@@ -132,7 +141,8 @@
         { "id": 3, "src": "weetabix-incredible-inside/weetabix-incredible-inside-04.jpg", "alt": "Weetabix Incredible Inside 4" },
         { "id": 4, "src": "weetabix-incredible-inside/weetabix-incredible-inside-05.jpg", "alt": "Weetabix Incredible Inside 5" },
         { "id": 5, "src": "weetabix-incredible-inside/weetabix-incredible-inside-06.jpg", "alt": "Weetabix Incredible Inside 6" }
-      ]
+      ],
+      "copy": "-<br/>Set of brand posters to promote the health benifits of Weetabix.<br/>-<br/>Design/Art Direction Typography illustration<br/>-"
     },
     {
       "id": 10,
@@ -148,7 +158,8 @@
         { "id": 4, "src": "observer-fma/observer-fma-05.jpg", "alt": "Observer Food Monthly Awards 5" },
         { "id": 5, "src": "observer-fma/observer-fma-06.jpg", "alt": "Observer Food Monthly Awards 6" },
         { "id": 6, "src": "observer-fma/observer-fma-07.jpg", "alt": "Observer Food Monthly Awards 7" }
-      ]
+      ],
+      "copy": "-<br/>Online/print campaign for The Observer Food Monthly Awards. #Votewithyouremptyplate<br/>-<br/>Design/Art Direction<br/>-"
     },
     {
       "id": 11,
@@ -164,7 +175,8 @@
         { "id": 4, "src": "campain/campain-05.jpg", "alt": "CamPAIN 5" },
         { "id": 5, "src": "campain/campain-06.jpg", "alt": "CamPAIN 6" },
         { "id": 6, "src": "campain/campain-07.jpg", "alt": "CamPAIN 7" }
-      ]
+      ],
+      "copy": "-<br/>Iconic set of 6 posters and postcards themed on pain for the London Marathon to help raise money for Barnardo's.<br/>-<br/>Creative Design/Art Direction illustration<br/>-"
     },
     {
       "id": 12,
@@ -177,7 +189,8 @@
         { "id": 1, "src": "baby-on-board/baby-on-board-02.jpg", "alt": "Baby on Board" },
         { "id": 2, "src": "baby-on-board/baby-on-board-03.jpg", "alt": "Baby on Board" },
         { "id": 3, "src": "baby-on-board/baby-on-board-04.jpg", "alt": "Baby on Board" }
-      ]
+      ],
+      "copy": "-<br/>Alternative baby on board badges.<br/>-<br/>Creative Design/Art Direction illustration<br/>-"
     },
     {
       "id": 13,
@@ -187,7 +200,8 @@
       "color": "#FFF",
       "images": [
         { "id": 0, "src": "southern-fail/southern-fail-01.jpg", "alt": "Southern FAIL Logo" }
-      ]
+      ],
+      "copy": "-<br/>Creative Design/Art Direction illustration<br/>-"
     },
     {
       "id": 14,
@@ -200,7 +214,8 @@
         { "id": 1, "src": "guardian-photography/guardian-photography-02.jpg", "alt": "Guardian Photography 2" },
         { "id": 2, "src": "guardian-photography/guardian-photography-03.jpg", "alt": "Guardian Photography 3" },
         { "id": 3, "src": "guardian-photography/guardian-photography-04.jpg", "alt": "Guardian Photography 4" }
-      ]
+      ],
+      "copy": "-<br/>Cover design for a Photography Masterclass supplement for a series of print ads to promote the same thing.<br/>-<br/>Design/Art Direction illustration<br/>-"
     },
     {
       "id": 15,
@@ -210,7 +225,8 @@
       "color": "#FFF",
       "images": [
         { "id": 0, "src": "axe-but/axe-but.jpg", "alt": "Axe But" }
-      ]
+      ],
+      "copy": "-<br/>Titles for pop promo.<br/>-<br/>Design/Art Direction Typography<br/>-"
     },
     {
       "id": 16,
@@ -226,7 +242,8 @@
         { "id": 4, "src": "guardian-do-something/guardian-do-something-05.jpg", "alt": "Guardian Do Something 5" },
         { "id": 5, "src": "guardian-do-something/guardian-do-something-06.jpg", "alt": "Guardian Do Something 6" },
         { "id": 6, "src": "guardian-do-something/guardian-do-something-07.jpg", "alt": "Guardian Do Something 7" }
-      ]
+      ],
+      "copy": "-<br/>Illustrations for online guardian animations promoting the Do Something weekend supplement<br/>-<br/>Design/Art Direction illustration<br/>-"
     },
     {
       "id": 17,
@@ -241,7 +258,8 @@
         { "id": 3, "src": "guardian-worldcup/guardian-worldcup-04.jpg", "alt": "Guardian World Cup 4" },
         { "id": 4, "src": "guardian-worldcup/guardian-worldcup-05.jpg", "alt": "Guardian World Cup 5" },
         { "id": 5, "src": "guardian-worldcup/guardian-worldcup-06.jpg", "alt": "Guardian World Cup 6" }
-      ]
+      ],
+      "copy": "-<br/>Logo design/ Online/print campaign for the launch of the Guardians 14’ World Cup coverage.<br/>-<br/>Design/Art Direction illustration<br/>-"
     },
     {
       "id": 18,
@@ -255,7 +273,8 @@
         { "id": 2, "src": "wrigleys-night-jar/wrigleys-night-jar-03.jpg", "alt": "Wrigleys Night Jar 3" },
         { "id": 3, "src": "wrigleys-night-jar/wrigleys-night-jar-04.jpg", "alt": "Wrigleys Night Jar 4" },
         { "id": 4, "src": "wrigleys-night-jar/wrigleys-night-jar-05.jpg", "alt": "Wrigleys Night Jar 5" }
-      ]
+      ],
+      "copy": "-<br/>A set of posters/logo/ interface designs to promote a chilling sci-fi horror game using groundbreaking 3D binaural sound technology to create a world of sound, which you have to navigate using only hearing and touch.<br/>-<br/>Design/Art Direction illustration<br/>-<br/><a href=\"https://vimeo.com/26620586\">https://vimeo.com/26620586</a>"
     },
     {
       "id": 19,
@@ -266,7 +285,8 @@
       "images": [
         { "id": 0, "src": "samsung-bedtimestories/samsung-bedtimestories-01.jpg", "alt": "Samsung Bedtime Stories 1" },
         { "id": 1, "src": "samsung-bedtimestories/samsung-bedtimestories-02.jpg", "alt": "Samsung Bedtime Stories 2" }
-      ]
+      ],
+      "copy": "-<br/>Logo design for Samsung Betime VR Stories app.<br/>-<br/>Design Typography<br/>-"
     },
     {
       "id": 20,
@@ -281,17 +301,19 @@
         { "id": 3, "src": "guardian-music/guardian-music-04.jpg", "alt": "Guardian Music 4" },
         { "id": 4, "src": "guardian-music/guardian-music-05.jpg", "alt": "Guardian Music 5" },
         { "id": 5, "src": "guardian-music/guardian-music-06.jpg", "alt": "Guardian Music 6" }
-      ]
+      ],
+      "copy": "-<br/>Logo design for Guardian music/ illustrational style for communications.<br/>-<br/>Design/Art Direction Typography<br/>-"
     },
     {
       "id": 21,
-      "client": "Outsmart",
-      "title": "Re referendum",
+      "client": "made by blah\u2122",
+      "title": "Article 1-50",
       "backgroundColor": "#3C3C3B",
       "color": "#FFF",
       "images": [
         { "id": 0, "src": "re-referendum/re-referendum.jpg", "alt": "Outsmart Re-referendum" }
-      ]
+      ],
+      "copy": "-<br/>Article 1-50 Countdown > The People's Manifesto > A social experement > Each image poses a topical question in the run up to Article 50 being triggered and asks the viewer whether they’re IN or OUT. The idea is to stir debate and get people thinking and talking about live topics in a post Brexit Britain at a time when the country is struggling with its identity. We’re currently using Instagram as a launchpad and interactive polling station for the work.<br/>-<br/>Creative Design/Art Direction illustration<br/>-<br/>@madebyblah madebyblah.com"
     },
     {
       "id": 22,
@@ -301,7 +323,8 @@
       "color": "#FFF",
       "images": [
         { "id": 0, "src": "very-tall/very-tall.jpg", "alt": "Very Tall" }
-      ]
+      ],
+      "copy": "-<br/>Branding and identity for Very Tall<br/>-<br/>Digital Content & Multi-Channel Editorial Experts.<br/>-<br/>Creative Design/Art Direction<br/>-<br/>@verrytall"
     },
     {
       "id": 23,
@@ -311,7 +334,8 @@
       "color": "#FFF",
       "images": [
         { "id": 0, "src": "lou-reed/lou-reed-01.jpg", "alt": "RIP Lou Reed" }
-      ]
+      ],
+      "copy": "-<br/>Lou Reed tribute poster.<br/>-<br/>Creative Design/Art Direction illustration<br/>-"
     },
     {
       "id": 24,
@@ -321,7 +345,8 @@
       "color": "#FFF",
       "images": [
         { "id": 0, "src": "night-tube/night-tube-01.jpg", "alt": "Night Tube" }
-      ]
+      ],
+      "copy": "-<br/>Poster to celerbrate the launch of TFL Night tube.<br/>-<br/>Creative Design/Art Direction illustration<br/>-"
     },
     {
       "id": 25,
@@ -331,7 +356,8 @@
       "color": "#FFF",
       "images": [
         { "id": 0, "src": "google-tote-bag/google-tote-bag-01.jpg", "alt": "google-eyes tote bag" }
-      ]
+      ],
+      "copy": "-<br/>made by blah promotional tote bag.<br/>-<br/>Creative Design/Art Direction illustration<br/>-"
     }
   ]
 }
