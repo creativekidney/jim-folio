@@ -4,6 +4,7 @@ import { List } from 'immutable';
 import _debounce from 'lodash/debounce';
 import { Link, animateScroll } from 'react-scroll';
 import styles from './scroller.scss';
+import { updateCurrentSlide } from '../../../actions/work';
 
 class Scroller extends React.Component {
   static getCurSlide() {
@@ -11,10 +12,6 @@ class Scroller extends React.Component {
     const scrollTop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
 
     return Math.round(scrollTop / window.innerHeight);
-  }
-
-  static gotoSlide(slide) {
-    animateScroll.scrollTo(slide * window.innerHeight, { duration: 300 });
   }
 
   static keydownHandler(e) {
@@ -35,7 +32,7 @@ class Scroller extends React.Component {
   }
 
   scrollHandler() {
-    this.constructor.gotoSlide(this.constructor.getCurSlide());
+    this.gotoSlide(this.constructor.getCurSlide());
   }
 
   keyupHandler(e) {
@@ -45,7 +42,14 @@ class Scroller extends React.Component {
 
     const modifier = e.keyCode === 38 ? -1 : 1;
     const nextSlide = (this.constructor.getCurSlide() + modifier) % (items.size + 2);
-    this.constructor.gotoSlide(nextSlide);
+    this.gotoSlide(nextSlide);
+  }
+
+  gotoSlide(slide) {
+    const { dispatch } = this.props;
+    animateScroll.scrollTo(slide * window.innerHeight, { duration: 300 });
+    dispatch(updateCurrentSlide(slide));
+    console.log('go to slide', slide);
   }
 
   render() {
@@ -101,6 +105,7 @@ class Scroller extends React.Component {
 Scroller.propTypes = {
   children: React.PropTypes.node.isRequired,
   items: React.PropTypes.instanceOf(List).isRequired,
+  dispatch: React.PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({

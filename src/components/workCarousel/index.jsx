@@ -5,6 +5,14 @@ import { List } from 'immutable';
 import styles from './workCarousel.scss';
 
 class WorkCarousel extends React.Component {
+  static renderSlide(image) {
+    return (
+      <div className={styles.slide} key={image.get('id')}>
+        <img src={`/assets/images/${image.get('src')}`} alt={image.get('alt')} />
+      </div>
+    );
+  }
+
   constructor(props) {
     super(props);
 
@@ -16,22 +24,27 @@ class WorkCarousel extends React.Component {
     return { __html: copy };
   }
 
-  renderSlider() {
-    let slides = this.props.images.map(image =>
-      (
-        <div className={styles.slide} key={image.get('id')}>
-          <img src={`/assets/images/${image.get('src')}`} alt={image.get('alt')} />
-        </div>
-      ),
-    );
 
-    slides = slides.push(
-      <div className={styles.slide} key="-1">
-        <div className={styles.synopsis}>
-          <p dangerouslySetInnerHTML={this.getCopyMarkup()} />
-        </div>
-      </div>,
-    );
+  renderSlider() {
+    const { active } = this.props;
+
+    let slides;
+
+    if (active) {
+      slides = this.props.images.map(image =>
+        this.constructor.renderSlide(image),
+      );
+
+      slides = slides.push(
+        <div className={styles.slide} key="-1">
+          <div className={styles.synopsis}>
+            <p dangerouslySetInnerHTML={this.getCopyMarkup()} />
+          </div>
+        </div>,
+      );
+    } else {
+      slides = this.constructor.renderSlide(this.props.images.first());
+    }
 
     const settings = {
       dots: true,
@@ -59,6 +72,7 @@ class WorkCarousel extends React.Component {
 WorkCarousel.propTypes = {
   images: React.PropTypes.instanceOf(List).isRequired,
   copy: React.PropTypes.string.isRequired,
+  active: React.PropTypes.bool.isRequired,
 };
 
 export default WorkCarousel;

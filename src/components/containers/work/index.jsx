@@ -4,13 +4,14 @@ import { List } from 'immutable';
 import WorkSlide from '../../presentational/workSlide';
 
 const Work = function Work(props) {
-  const { items } = props;
+  const { items, curSlide } = props;
 
   console.log(items.toJS());
 
   const workSlides = items.map((work, key) =>
     (
       <WorkSlide
+        active={curSlide === key + 1}
         pos={key + 1}
         key={work.get('id')}
         color={work.get('color')}
@@ -32,6 +33,7 @@ const Work = function Work(props) {
 
 const mapStateToProps = state => ({
   items: state.work.items,
+  curSlide: state.work.curSlide,
 });
 
 export default connect(
@@ -40,4 +42,5 @@ export default connect(
 
 Work.propTypes = {
   items: React.PropTypes.instanceOf(List).isRequired,
+  curSlide: React.PropTypes.number.isRequired,
 };
