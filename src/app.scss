@@ -11,25 +11,3 @@ html, body {
   height: 100%;
   font-size: 62.5%;
 }
-
-// slick sider overrides
-:global {
-  .slick-initialized .slick-slide {
-    max-width: 100%;
-    max-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-
-    img {
-      max-width: 100%;
-      width: auto;
-      height: auto;
-    }
-  }
-
-  .slick-dots {
-    bottom: 20px;
-  }
-}

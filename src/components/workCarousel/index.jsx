@@ -1,3 +1,4 @@
+/* global $ */
 import React from 'react';
 import Slider from 'react-slick';
 import { List } from 'immutable';
@@ -34,7 +35,9 @@ class WorkCarousel extends React.Component {
 
     const settings = {
       dots: true,
-      arrows: false,
+      dotsClass: styles.dots,
+      arrows: true,
+      customPaging: () => <a>dot</a>,
     };
 
     return (
