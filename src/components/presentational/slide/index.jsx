@@ -5,7 +5,7 @@ import styles from './slide.scss';
 
 class Slide extends React.Component {
   render() {
-    const { backgroundColor, color, h1, h2, pos, children} = this.props;
+    const { backgroundColor, color, h1, h2, pos, children } = this.props;
 
     return (
       <Element
