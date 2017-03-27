@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlwebpackPlugin = require('html-webpack-plugin'); // eslint-disable-line import/no-extraneous-dependencies
 
 module.exports = {
   context: path.resolve(__dirname, './src'),
@@ -7,8 +8,8 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, './dist/assets'),
-    publicPath: '/assets',
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/',
   },
   devServer: {
     contentBase: path.resolve(__dirname, './src'),
@@ -49,8 +50,6 @@ module.exports = {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
           'file-loader?name=[path][name].[ext]',
-          // Used for image min/optimisation. Options to be defined
-          'image-webpack-loader',
         ],
       },
       {
@@ -59,6 +58,11 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlwebpackPlugin({
+      template: 'index.html',
+    }),
+  ],
   resolve: {
     modules: [
       path.resolve(__dirname, './src'),

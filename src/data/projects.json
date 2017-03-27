@@ -196,10 +196,10 @@
       "id": 13,
       "client": "made by blah\u2122",
       "title": "Southern FAIL logo",
-      "backgroundColor": "#36A561",
+      "backgroundColor": "#37ac5f",
       "color": "#FFF",
       "images": [
-        { "id": 0, "src": "southern-fail/southern-fail-01.jpg", "alt": "Southern FAIL Logo" }
+        { "id": 0, "src": "southern-fail/southern-fail-01.gif", "alt": "Southern FAIL Logo" }
       ],
       "copy": "-<br/>Creative Design/Art Direction illustration<br/>-"
     },

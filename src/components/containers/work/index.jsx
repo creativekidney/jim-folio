@@ -6,8 +6,6 @@ import WorkSlide from '../../presentational/workSlide';
 const Work = function Work(props) {
   const { items, curSlide } = props;
 
-  console.log(items.toJS());
-
   const workSlides = items.map((work, key) =>
     (
       <WorkSlide

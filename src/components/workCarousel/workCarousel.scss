@@ -1,3 +1,5 @@
+@import '../../styles/_variables.scss';
+
 .slide {
   position: relative;
 }
@@ -5,13 +7,23 @@
 .synopsis {
   max-width: 300px;
   position: absolute;
-  top: 97px;
-  left: 40px;
+  top: 9.7rem;
+  left: 4rem;
 
   p {
-    font: 2.4rem/2.7rem "helvetica neue", helvetica, arial, sans-serif;
+    font: 2.4rem/2.8rem $default-font;
     font-weight: 400;
     margin-top: 0;
+
+  }
+  @media(max-width: $breakpoint-small) {
+    top: 7.2rem;
+    left: 2.5rem;
+    right: 2.5rem;
+
+    p {
+      font: 1.8rem/2.2rem $default-font;
+    }
   }
 
   a {
@@ -38,6 +50,8 @@
     background: none;
     border: none;
     outline: none;
+    opacity: 0.4;
+    transition: 0.4s ease-in-out;
 
     button {
       width: 20px;
@@ -54,19 +68,24 @@
       top: 50%;
       left: 50%;
       transform: translate3d(-50%, -50%, 0);
-      width: 20%;
-      height: 20%;
+      width: 10%;
+      height: 10%;
       background: white;
       border-radius: 10px;
-      transition: 0.2s ease-in-out;
+      transition: 0.4s;
     }
 
     &:hover, &.slick-active {
       &:after {
-        width: 70%;
-        height: 70%;
+        width: 60%;
+        height: 60%;
+        transition: 0.4s cubic-bezier(0.370, 0.560, 0.445, 1.525);
       }
     }
+  }
+
+  &:hover li {
+    opacity: 1;
   }
 }
 
@@ -92,8 +111,9 @@
 
   .slick-active {
     &:after {
-      width: 70% !important;
-      height: 70% !important;
+      width: 60% !important;
+      height: 60% !important;
+      transition: 0.4s cubic-bezier(0.370, 0.560, 0.445, 1.525);
     }
   }
 }

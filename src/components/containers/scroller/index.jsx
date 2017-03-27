@@ -11,7 +11,7 @@ class Scroller extends React.Component {
     const doc = document.documentElement;
     const scrollTop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
 
-    return Math.round(scrollTop / window.innerHeight);
+    return Math.round(scrollTop / (window.innerHeight));
   }
 
   static keydownHandler(e) {
@@ -19,16 +19,24 @@ class Scroller extends React.Component {
     e.preventDefault();
   }
 
+  constructor(props) {
+    super(props);
+    this.updateCurrentSlide = _debounce(this.updateCurrentSlide, 500);
+    this.scrollHandler = _debounce(this.scrollHandler, 300);
+    this.keyupHandler = _debounce(this.keyupHandler, 100);
+    this.gotoSlide = _debounce(this.gotoSlide, 100);
+  }
+
   componentDidMount() {
-    window.addEventListener('scroll', _debounce(() => this.scrollHandler(), 200), false);
-    window.addEventListener('keyup', _debounce(e => this.keyupHandler(e), 100), false);
+    window.addEventListener('scroll', () => this.scrollHandler(), false);
+    window.addEventListener('keyup', e => this.keyupHandler(e), false);
     window.addEventListener('keydown', this.constructor.keydownHandler, false);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', _debounce(() => this.scrollHandler(), 200), false);
-    window.removeEventListener('keyup', _debounce(e => this.keyupHandler(e), 100), false);
-    window.removeEventListener('keydown', this.constructor.keydownHandler, false);
+    window.removeEventListener('scroll');
+    window.removeEventListener('keyup');
+    window.removeEventListener('keydown');
   }
 
   scrollHandler() {
@@ -46,16 +54,19 @@ class Scroller extends React.Component {
   }
 
   gotoSlide(slide) {
+    animateScroll.scrollTo(slide * window.innerHeight, { duration: 150 });
+    this.updateCurrentSlide(slide);
+  }
+
+  updateCurrentSlide(slide) {
     const { dispatch } = this.props;
-    animateScroll.scrollTo(slide * window.innerHeight, { duration: 300 });
     dispatch(updateCurrentSlide(slide));
-    console.log('go to slide', slide);
   }
 
   render() {
     const { children, items } = this.props;
     const opts = {
-      duration: 1000,
+      duration: 500,
       smooth: true,
       spy: true,
     };

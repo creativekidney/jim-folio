@@ -7,6 +7,15 @@
   transform: translate3d(0, -50%, 0);
   display: flex;
   flex-direction: column;
+
+  .pageDot {
+    opacity: 0.4;
+    transition: 0.4s ease-in-out;
+  }
+
+  &:hover .pageDot {
+    opacity: 1;
+  }
 }
 
 .pageDot {
@@ -25,17 +34,18 @@
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
-    width: 20%;
-    height: 20%;
+    width: 10%;
+    height: 10%;
     background: white;
     border-radius: 10px;
-    transition: 0.2s ease-in-out;
+    transition: 0.4s;
   }
 
   &:hover, &.pageDotActive {
     &:after {
-      width: 70%;
-      height: 70%;
+      width: 60%;
+      height: 60%;
+      transition: 0.4s cubic-bezier(0.370, 0.560, 0.445, 1.525);
     }
   }
 

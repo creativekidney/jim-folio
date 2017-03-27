@@ -27,7 +27,6 @@ class WorkSlide extends React.Component {
     const { pos, client, title, color, backgroundColor } = this.props;
 
     return (
-      // <LazyLoadChildren index={index}>
       <Slide
         pos={pos}
         h1={client}
@@ -37,7 +36,6 @@ class WorkSlide extends React.Component {
       >
         {this.renderCarousel()}
       </Slide>
-      // </LazyLoadChildren>
     );
   }
 }
