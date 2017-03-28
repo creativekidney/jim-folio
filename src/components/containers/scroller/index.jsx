@@ -7,13 +7,6 @@ import styles from './scroller.scss';
 import { updateCurrentSlide } from '../../../actions/work';
 
 class Scroller extends React.Component {
-  static getCurSlide() {
-    const doc = document.documentElement;
-    const scrollTop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-
-    return Math.round(scrollTop / (window.innerHeight));
-  }
-
   static keydownHandler(e) {
     if (e.keyCode !== 38 && e.keyCode !== 40) { return; }
     e.preventDefault();
@@ -38,8 +31,17 @@ class Scroller extends React.Component {
     window.removeEventListener('keydown');
   }
 
-  scrollHandler() {
-    this.gotoSlide(this.constructor.getCurSlide());
+  getWindowHeight() {
+    const { items } = this.props;
+    const windowHeight = document.documentElement.scrollHeight / (items.size + 2);
+    return windowHeight;
+  }
+
+  getCurSlide() {
+    const doc = document.documentElement;
+    const scrollTop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+
+    return Math.round(scrollTop / this.getWindowHeight());
   }
 
   keyupHandler(e) {
@@ -48,12 +50,16 @@ class Scroller extends React.Component {
     e.preventDefault();
 
     const modifier = e.keyCode === 38 ? -1 : 1;
-    const nextSlide = (this.constructor.getCurSlide() + modifier) % (items.size + 2);
+    const nextSlide = (this.getCurSlide() + modifier) % (items.size + 2);
     this.gotoSlide(nextSlide);
   }
 
+  scrollHandler() {
+    this.gotoSlide(this.getCurSlide());
+  }
+
   gotoSlide(slide) {
-    animateScroll.scrollTo(slide * window.innerHeight, { duration: 150 });
+    animateScroll.scrollTo(slide * this.getWindowHeight(), { duration: 150 });
     this.updateCurrentSlide(slide);
   }
 

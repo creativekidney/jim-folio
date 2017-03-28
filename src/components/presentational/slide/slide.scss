@@ -6,7 +6,7 @@
   display: flex;
   
   @media (max-width: $breakpoint-medium) {
-    height: 4rem;
+    height: 3.7rem;
   }
 }
 
@@ -28,8 +28,8 @@
   }
 
   @media (max-width: $breakpoint-medium) {
-    width: 4rem;
-    height: 4rem;
+    width: 3.7rem;
+    height: 3.7rem;
     margin-right: 0;
   }
 }
