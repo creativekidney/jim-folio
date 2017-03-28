@@ -33,7 +33,7 @@
         { "id": 6, "src": "guardian-independance/guardian-independance-07.jpg", "alt": "The Guardian Independance 7" },
         { "id": 7, "src": "guardian-independance/guardian-independance-08.jpg", "alt": "The Guardian Independance 8" }
       ],
-      "copy": "-<br/>Tactical Ad to promote a supplement on the life of Margaret Thatcher, the weekend after her death. Loved and loathed in equal measure.<br/>-<br/>Design/Art Direction illustration<br/>-"
+      "copy": "-<br/>Print campaign that celebrates the Guardian’s independence. Unlike almost every other news outlet, the Guardian isn’t owned by shareholders who can influence news stories and push their own agendas.<br/>-<br/>Design/ArtDirection Typography<br/>-"
     },
     {
       "id": 2,
@@ -49,16 +49,19 @@
         { "id": 4, "src": "animalography/animalography-05.jpg", "alt": "Animalography 5" },
         { "id": 5, "src": "animalography/animalography-06.jpg", "alt": "Animalography 6" }
       ],
-      "copy": "-<br/>Set of posters available at:<br/><br/><a href=\"http://shop.theymadethislondon.com/collections/animalography\">http://shop.theymadethislondon.com/collections/animalography</a>"
+      "copy": "-<br/>Set of posters available at:<br/><br/><a href=\"http://shop.theymadethislondon.com/collections/animalography\" target=\"_blank\" rel=\"noopener noreferrer\">http://shop.theymadethislondon.com/collections/animalography</a>"
     },
     {
       "id": 3,
       "client": "made by blah\u2122",
-      "title": "Lemmy Tribute",
-      "backgroundColor": "#E5E5E5",
+      "title": "be seen dead",
+      "backgroundColor": "#a8a9ad",
       "color": "#fff",
       "images": [
-        { "id": 0, "src": "lemmy-tribute/lemmy-01.jpg", "alt": "Lemmy Tribute" }
+        { "id": 0, "src": "be-seen-dead/be-seen-dead-01.jpg", "alt": "be seen dead 1" },
+        { "id": 1, "src": "be-seen-dead/be-seen-dead-02.jpg", "alt": "be seen dead 2" },
+        { "id": 2, "src": "be-seen-dead/be-seen-dead-03.jpg", "alt": "be seen dead 3" },
+        { "id": 3, "src": "be-seen-dead/be-seen-dead-04.jpg", "alt": "be seen dead 4" }
       ],
       "copy": "-<br/>Tribute Poster/ T-Shirt and Print to commemorate the death of Motorhead frontman Lemmy Kilmister, who famously drank a bottle of Jack Daniel's every day.<br/>-<br/>Creative Design/ArtDirectionTypography<br/>-"
     },
@@ -83,7 +86,7 @@
       "images": [
         { "id": 0, "src": "barclays-code-playground/barclays-code-playground-01.jpg", "alt": "Barclays Code Playground" }
       ],
-      "copy": "-<br/>In 2014 coding was included in the UK curriculum. This change led to a need to raise the public awareness of the importance of coding<br/>-<br/>given the vital role it will play in the future employability children and in the economy of the future.<br/>-<br/>Design/ArtDirection Typography<br/>-<br/><a href=\"barclayscodeplayground.co.uk\">barclayscodeplayground.co.uk</a>"
+      "copy": "-<br/>In 2014 coding was included in the UK curriculum. This change led to a need to raise the public awareness of the importance of coding<br/>-<br/>given the vital role it will play in the future employability children and in the economy of the future.<br/>-<br/>Design/ArtDirection Typography<br/>-<br/><a href=\"http://barclayscodeplayground.co.uk/\" target=\"_blank\" rel=\"noopener noreferrer\">barclayscodeplayground.co.uk</a>"
     },
     {
       "id": 6,
@@ -274,7 +277,7 @@
         { "id": 3, "src": "wrigleys-night-jar/wrigleys-night-jar-04.jpg", "alt": "Wrigleys Night Jar 4" },
         { "id": 4, "src": "wrigleys-night-jar/wrigleys-night-jar-05.jpg", "alt": "Wrigleys Night Jar 5" }
       ],
-      "copy": "-<br/>A set of posters/logo/ interface designs to promote a chilling sci-fi horror game using groundbreaking 3D binaural sound technology to create a world of sound, which you have to navigate using only hearing and touch.<br/>-<br/>Design/Art Direction illustration<br/>-<br/><a href=\"https://vimeo.com/26620586\">https://vimeo.com/26620586</a>"
+      "copy": "-<br/>A set of posters/logo/ interface designs to promote a chilling sci-fi horror game using groundbreaking 3D binaural sound technology to create a world of sound, which you have to navigate using only hearing and touch.<br/>-<br/>Design/Art Direction illustration<br/>-<br/><a href=\"https://vimeo.com/26620586\" target=\"_blank\" rel=\"noopener noreferrer\">https://vimeo.com/26620586</a>"
     },
     {
       "id": 19,
@@ -311,7 +314,7 @@
       "backgroundColor": "#3C3C3B",
       "color": "#FFF",
       "images": [
-        { "id": 0, "src": "re-referendum/re-referendum.jpg", "alt": "Outsmart Re-referendum" }
+        { "id": 0, "src": "re-referendum/re-referendum.gif", "alt": "Outsmart Re-referendum" }
       ],
       "copy": "-<br/>Article 1-50 Countdown > The People's Manifesto > A social experement > Each image poses a topical question in the run up to Article 50 being triggered and asks the viewer whether they’re IN or OUT. The idea is to stir debate and get people thinking and talking about live topics in a post Brexit Britain at a time when the country is struggling with its identity. We’re currently using Instagram as a launchpad and interactive polling station for the work.<br/>-<br/>Creative Design/Art Direction illustration<br/>-<br/>@madebyblah madebyblah.com"
     },
@@ -329,17 +332,6 @@
     {
       "id": 23,
       "client": "made by blah\u2122",
-      "title": "RIP Lou Reed",
-      "backgroundColor": "#ECC700",
-      "color": "#FFF",
-      "images": [
-        { "id": 0, "src": "lou-reed/lou-reed-01.jpg", "alt": "RIP Lou Reed" }
-      ],
-      "copy": "-<br/>Lou Reed tribute poster.<br/>-<br/>Creative Design/Art Direction illustration<br/>-"
-    },
-    {
-      "id": 24,
-      "client": "made by blah\u2122",
       "title": "Night Tube",
       "backgroundColor": "#2E2D2C",
       "color": "#FFF",
@@ -349,7 +341,7 @@
       "copy": "-<br/>Poster to celerbrate the launch of TFL Night tube.<br/>-<br/>Creative Design/Art Direction illustration<br/>-"
     },
     {
-      "id": 25,
+      "id": 24,
       "client": "made by blah\u2122",
       "title": "google-eyes tote bag",
       "backgroundColor": "#FF7C80",

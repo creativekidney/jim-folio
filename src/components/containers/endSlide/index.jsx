@@ -22,6 +22,7 @@ class EndSlide extends React.Component {
         pos={items.size + 1}
         h1={about.get('name', '')}
         h2={about.get('jobTitle', '')}
+        instagram
         color={about.get('color', '#fff')}
         backgroundColor={about.get('backgroundColor', '#fff')}
       >
@@ -32,8 +33,8 @@ class EndSlide extends React.Component {
           </p>
           <p>
             Please feel<br />
-            free to get in touch<br />
-            made by blah™<br />
+            free to <a href="mailto:j_townsend74@yahoo.com" target="_blank" rel="noopener noreferrer">get in touch</a><br />
+            <a href="http://www.madebyblah.com" target="_blank" rel="noopener noreferrer">made by blah</a>&#8482;<br />
             +44 7855 427 917
           </p>
         </div>

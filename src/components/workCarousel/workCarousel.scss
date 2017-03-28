@@ -11,21 +11,23 @@
   left: 4rem;
   margin-top: 15px;
   overflow-y: auto;
-  max-height: calc(100% - 9.7rem - 6rem);
+  max-height: calc(100% - 9.7rem - 6rem); // 100% - top - bottom
 
   p {
     font: 2.4rem/2.8rem $default-font;
     font-weight: 400;
     margin-top: -15px;
+    word-break: break-word;
   }
 
   @media(max-width: $breakpoint-small) {
-    top: 7.2rem;
+    top: 6.9rem;
     left: 2.5rem;
     right: 2.5rem;
 
     p {
       font: 1.8rem/2.2rem $default-font;
+      margin-top: -11px;
     }
   }
 

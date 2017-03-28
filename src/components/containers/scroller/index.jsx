@@ -21,10 +21,9 @@ class Scroller extends React.Component {
 
   constructor(props) {
     super(props);
-    this.updateCurrentSlide = _debounce(this.updateCurrentSlide, 500);
+    this.updateCurrentSlide = _debounce(this.updateCurrentSlide, 400);
     this.scrollHandler = _debounce(this.scrollHandler, 300);
     this.keyupHandler = _debounce(this.keyupHandler, 100);
-    this.gotoSlide = _debounce(this.gotoSlide, 100);
   }
 
   componentDidMount() {

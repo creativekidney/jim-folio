@@ -22,6 +22,7 @@ class AboutSlide extends React.Component {
         pos={0}
         h1={about.get('name', '')}
         h2={about.get('jobTitle', '')}
+        instagram
         color={about.get('color', '#fff')}
         backgroundColor={about.get('backgroundColor', '#fff')}
       >
@@ -34,7 +35,7 @@ class AboutSlide extends React.Component {
           <p>
             I’m a designer/art director currently<br />
             working at BBH London and also one<br />
-            half of creative duo made by blah™
+            half of creative duo <a href="http://www.madebyblah.com" target="_blank" rel="noopener noreferrer">made by blah</a>&#8482;
           </p>
           <p>
             Please feel free to get in touch<br />
