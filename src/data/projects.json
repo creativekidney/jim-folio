@@ -21,7 +21,7 @@
       "id": 1,
       "client": "The Guardian",
       "title": "Independance",
-      "backgroundColor": "#d7565c",
+      "backgroundColor": "#de4a58",
       "color": "#FFF",
       "images": [
         { "id": 0, "src": "guardian-independance/guardian-independance-01.jpg", "alt": "The Guardian Independance 1" },
@@ -54,7 +54,7 @@
     {
       "id": 3,
       "client": "made by blah\u2122",
-      "title": "be seen dead",
+      "title": "Be seen dead",
       "backgroundColor": "#a8a9ad",
       "color": "#fff",
       "images": [
@@ -63,7 +63,7 @@
         { "id": 2, "src": "be-seen-dead/be-seen-dead-03.jpg", "alt": "be seen dead 3" },
         { "id": 3, "src": "be-seen-dead/be-seen-dead-04.jpg", "alt": "be seen dead 4" }
       ],
-      "copy": "-<br/>Tribute Poster/ T-Shirt and Print to commemorate the death of Motorhead frontman Lemmy Kilmister, who famously drank a bottle of Jack Daniel's every day.<br/>-<br/>Creative Design/ArtDirectionTypography<br/>-"
+      "copy": "-<br/>Set of posters to commemorate the death of four Rock & Roll legends.<br/>-"
     },
     {
       "id": 4,

@@ -28,18 +28,18 @@ class AboutSlide extends React.Component {
       >
         <div>
           <p>
-            Hi, my name is Jim Townsend.<br />
-            Congratulations on finding my<br />
-            online portfolio.
+            Hi, my name is Jim&nbsp;Townsend.<br />
+            Congratulations on finding my
+            online&nbsp;portfolio.
           </p>
           <p>
-            I’m a designer/art director currently<br />
-            working at BBH London and also one<br />
+            I’m a designer/art director currently
+            working at BBH London and also one
             half of creative duo <a href="http://www.madebyblah.com" target="_blank" rel="noopener noreferrer">made by blah</a>&#8482;
           </p>
           <p>
-            Please feel free to get in touch<br />
-            +44 7855 427 917
+            Please feel free to <a href="mailto:Jimtownsend74@gmail.com" target="_blank" rel="noopener noreferrer">get in touch</a><br />
+            <a href="tel:+447855427917">+44 7855 427 917</a>
           </p>
         </div>
       </Slide>

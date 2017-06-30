@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js",
-    "prebuild": "rm -rf dist/** && cp -a src/assets dist",
+    "prebuild": "rm -rf dist/** && cp -a src/assets dist && cp -a src/icons dist",
     "build": "webpack -p --config webpack.config.js"
   },
   "dependencies": {

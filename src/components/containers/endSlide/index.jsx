@@ -33,9 +33,9 @@ class EndSlide extends React.Component {
           </p>
           <p>
             Please feel<br />
-            free to <a href="mailto:j_townsend74@yahoo.com" target="_blank" rel="noopener noreferrer">get in touch</a><br />
+            free to <a href="mailto:Jimtownsend74@gmail.com" target="_blank" rel="noopener noreferrer">get in touch</a><br />
             <a href="http://www.madebyblah.com" target="_blank" rel="noopener noreferrer">made by blah</a>&#8482;<br />
-            +44 7855 427 917
+            <a href="tel:+447855427917">+44 7855 427 917</a>
           </p>
         </div>
       </Slide>
