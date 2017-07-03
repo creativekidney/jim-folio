@@ -13,17 +13,10 @@ class WorkCarousel extends React.Component {
     );
   }
 
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-  }
-
   getCopyMarkup() {
     const { copy } = this.props;
     return { __html: copy };
   }
-
 
   renderSlider() {
     const { active } = this.props;

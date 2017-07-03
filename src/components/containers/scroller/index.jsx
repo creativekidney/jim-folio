@@ -4,7 +4,7 @@ import { List } from 'immutable';
 import _debounce from 'lodash/debounce';
 import { Link, animateScroll } from 'react-scroll';
 import styles from './scroller.scss';
-import { updateCurrentSlide } from '../../../actions/work';
+import { updateCurrentSlide } from '../../../actions/app';
 
 class Scroller extends React.Component {
   static keydownHandler(e) {

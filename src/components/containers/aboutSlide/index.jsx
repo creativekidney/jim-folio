@@ -3,16 +3,14 @@ import { connect } from 'react-redux';
 import { Map } from 'immutable';
 import './aboutSlide.scss';
 import Slide from '../../presentational/slide';
+import { fetchAboutData } from '../../../actions/about';
+import { getAboutInfo } from '../../../reducers/about';
 
 class AboutSlide extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {};
+  componentDidMount() {
+    const { fetchData } = this.props;
+    fetchData();
   }
-
-  componentDidMount() {}
-  componentWillUnmount() {}
 
   render() {
     const { about } = this.props;
@@ -48,13 +46,23 @@ class AboutSlide extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  about: state.work.about,
+  about: getAboutInfo(state.about),
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchData: dispatch(fetchAboutData()),
 });
 
 export default connect(
   mapStateToProps,
+  mapDispatchToProps,
 )(AboutSlide);
 
 AboutSlide.propTypes = {
   about: React.PropTypes.instanceOf(Map).isRequired,
+  fetchData: React.PropTypes.func,
+};
+
+AboutSlide.defaultProps = {
+  fetchData: () => {},
 };

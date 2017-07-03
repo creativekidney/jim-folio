@@ -3,8 +3,7 @@ import { List } from 'immutable';
 import _isEmpty from 'lodash/isEmpty';
 import styles from './workSlide.scss';
 import Slide from '../slide';
-import WorkCarousel from '../../workCarousel';
-// import LazyLoadChildren from '../../utils/lazyLoadChildren';
+import WorkCarousel from '../workCarousel';
 
 class WorkSlide extends React.Component {
   renderCarousel() {

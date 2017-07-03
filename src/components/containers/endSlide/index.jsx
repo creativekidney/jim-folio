@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { Map, List } from 'immutable';
 import './endSlide.scss';
 import Slide from '../../presentational/slide';
+import { getAboutInfo } from '../../../reducers/about';
+import { getWorkItems } from '../../../reducers/work';
 
 class EndSlide extends React.Component {
   constructor(props) {
@@ -10,9 +12,6 @@ class EndSlide extends React.Component {
 
     this.state = {};
   }
-
-  componentDidMount() {}
-  componentWillUnmount() {}
 
   render() {
     const { about, items } = this.props;
@@ -44,8 +43,8 @@ class EndSlide extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  about: state.work.about,
-  items: state.work.items,
+  about: getAboutInfo(state.about),
+  items: getWorkItems(state.work),
 });
 
 export default connect(
